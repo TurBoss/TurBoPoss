@@ -1,0 +1,12 @@
+{
+  "name": "TurBoPoss",
+  "app_id": "",
+  "v2": true,
+  "typescript": true,
+  "proxies": [
+    {"path": "/client-list", "proxyUrl": "http://192.168.3.122:8081/client-list"},
+    {"path": "/client-create", "proxyUrl": "http://192.168.3.122:8081/client-create"},
+    {"path": "/client-edit", "proxyUrl": "http://192.168.3.122:8081/client-edit"},
+    {"path": "/client-delete", "proxyUrl": "http://192.168.3.122:8081/client-delete"}
+  ]
+}

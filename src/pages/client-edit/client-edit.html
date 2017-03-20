@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Editar Cliente</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <form [formGroup]="client" (ngSubmit)="register()">
+
+    <ion-item>
+      <ion-label floating>Nombre</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Apellidos</ion-label>
+      <ion-input type="text" formControlName="surname"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Telefono</ion-label>
+      <ion-input type="text" formControlName="tlf"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>NIF</ion-label>
+      <ion-input type="text" formControlName="nif"></ion-input>
+    </ion-item>
+
+	<ion-item>
+      <button ion-button type="submit" class="wide" [disabled]="!client.valid">Editar</button>
+    </ion-item>
+
+  </form>
+
+</ion-content>

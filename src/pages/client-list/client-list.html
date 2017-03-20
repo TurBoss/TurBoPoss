@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Clientes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item [navPush]="clientCreatePage">
+      <ion-icon class="large" name="person-add"></ion-icon>
+    </button>
+    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+      {{item.name}}
+      {{item.surname}}
+      <div class="item-note" item-right>
+        {{item.tlf}}
+      </div>
+    </button>
+  </ion-list>
+</ion-content>

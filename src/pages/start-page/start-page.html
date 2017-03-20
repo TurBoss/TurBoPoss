@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>TurBoPoss</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h3>Opciones</h3>
+
+  <ion-list>
+    <ion-item>
+      <button ion-button class="wide" color="primary" [navPush]="dateListPage">Citas</button>
+    </ion-item>
+    <ion-item>
+      <button ion-button class="wide" color="primary" [navPush]="clientListPage">Clientes</button>
+    </ion-item>
+    <ion-item>
+      <button ion-button class="wide" color="primary" [navPush]="productsListPage">Productos</button>
+    </ion-item>
+    <ion-item>
+      <button ion-button class="wide" color="primary" [navPush]="suppliesListPage">Consumibles</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

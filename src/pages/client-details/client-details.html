@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Detalles</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+	  <p>Nombre:</p>
+      <h1 text-center *ngIf="selectedItem">{{selectedItem.name}}</h1>
+    </ion-item>
+    <ion-item>
+	  <p>Apellidos:</p>
+      <h2 text-center *ngIf="selectedItem">{{selectedItem.surname}}</h2>
+    </ion-item>
+    <ion-item>
+	  <p>Telefono:</p>
+	  <h3 text-center *ngIf="selectedItem">{{selectedItem.tlf}}</h3>
+    </ion-item>
+    <ion-item>
+	  <p>e-mail:</p>
+      <h3 text-center *ngIf="selectedItem">{{selectedItem.email}}</h3>
+    </ion-item>
+    <ion-item>
+	  <p>Nif:</p>
+      <h3 text-center *ngIf="selectedItem">{{selectedItem.nif}}</h3>
+    </ion-item>
+    <ion-item>
+      <button ion-button class="wide" color="primary" (click)="edit($event)">Editar</button>
+    </ion-item>
+    <ion-item>
+      <button ion-button class="wide" color="primary" (click)="delete_confirm($event)">Eliminar</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
