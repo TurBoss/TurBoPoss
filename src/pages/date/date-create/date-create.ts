@@ -17,7 +17,7 @@ export class DateCreatePage {
 
   private date: FormGroup;
 
-  optionsList: Array<{ id: number, name: string }> = [];
+  optionsList: Array<{ id: string, name: string, surname: string }> = [];
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -26,8 +26,7 @@ export class DateCreatePage {
   {
 
     this.date = this.formBuilder.group({
-      name: ['', Validators.required],
-      surname: ['', Validators.required],
+      client: ['', Validators.required],
       date: ['', Validators.required],
       hour: ['', Validators.required]
     });
@@ -50,7 +49,8 @@ export class DateCreatePage {
     		for(let i = 0; i < data.length; i++) {
     		  this.optionsList.push({
     		    id: data[i]["id"],
-      			name: data[i]["name"]
+      			name: data[i]["name"],
+            surname: data[i]["surname"]
     		  });
     		}
     });

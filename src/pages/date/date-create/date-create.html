@@ -14,8 +14,8 @@
 
     <ion-item>
       <ion-label floating>Cleinte</ion-label>
-      <ion-select okText="Ok" cancelText="Cancelar" formControlName="name">
-        <ion-option *ngFor="let item of optionsList" value="{{item.id}}">{{item.name}}</ion-option>
+      <ion-select okText="Ok" cancelText="Cancelar" formControlName="client">
+        <ion-option *ngFor="let item of optionsList" value="{{item.id}}">{{item.name}} {{item.surname}}</ion-option>
       </ion-select>
     </ion-item>
 
