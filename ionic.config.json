@@ -7,6 +7,10 @@
     {"path": "/client-list", "proxyUrl": "http://192.168.3.122:8081/client-list"},
     {"path": "/client-create", "proxyUrl": "http://192.168.3.122:8081/client-create"},
     {"path": "/client-edit", "proxyUrl": "http://192.168.3.122:8081/client-edit"},
-    {"path": "/client-delete", "proxyUrl": "http://192.168.3.122:8081/client-delete"}
+    {"path": "/client-delete", "proxyUrl": "http://192.168.3.122:8081/client-delete"},
+    {"path": "/product-list", "proxyUrl": "http://192.168.3.122:8081/product-list"},
+    {"path": "/product-create", "proxyUrl": "http://192.168.3.122:8081/product-create"},
+    {"path": "/product-edit", "proxyUrl": "http://192.168.3.122:8081/product-edit"},
+    {"path": "/product-delete", "proxyUrl": "http://192.168.3.122:8081/product-delete"}
   ]
 }
