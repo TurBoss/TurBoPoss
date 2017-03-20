@@ -15,6 +15,10 @@
     {"path": "/supplies-list", "proxyUrl": "http://192.168.3.122:8081/supplies-list"},
     {"path": "/supplies-create", "proxyUrl": "http://192.168.3.122:8081/supplies-create"},
     {"path": "/supplies-edit", "proxyUrl": "http://192.168.3.122:8081/supplies-edit"},
-    {"path": "/supplies-delete", "proxyUrl": "http://192.168.3.122:8081/supplies-delete"}
+    {"path": "/supplies-delete", "proxyUrl": "http://192.168.3.122:8081/supplies-delete"},
+    {"path": "/service-list", "proxyUrl": "http://192.168.3.122:8081/service-list"},
+    {"path": "/service-create", "proxyUrl": "http://192.168.3.122:8081/service-create"},
+    {"path": "/service-edit", "proxyUrl": "http://192.168.3.122:8081/service-edit"},
+    {"path": "/service-delete", "proxyUrl": "http://192.168.3.122:8081/service-delete"}
   ]
 }

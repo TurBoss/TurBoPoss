@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Registrar Producto</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <form [formGroup]="service" (ngSubmit)="register()">
+
+    <ion-item>
+      <ion-label floating>Nombre</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Descripcion</ion-label>
+      <ion-input type="text" formControlName="description"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Precio</ion-label>
+      <ion-input type="text" formControlName="price"></ion-input>
+    </ion-item>
+
+	  <ion-item>
+      <button ion-button type="submit" class="wide" [disabled]="!service.valid">Registrar</button>
+    </ion-item>
+
+  </form>
+
+</ion-content>

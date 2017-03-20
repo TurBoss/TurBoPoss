@@ -25,6 +25,12 @@ import { SuppliesDetailsPage } from '../pages/supplies/supplies-details/supplies
 import { SuppliesPopOverPage } from '../pages/supplies/supplies-details/pop-over';
 import { SuppliesEditPage } from '../pages/supplies/supplies-edit/supplies-edit';
 
+import { ServiceListPage } from '../pages/service/service-list/service-list';
+import { ServiceCreatePage } from '../pages/service/service-create/service-create';
+import { ServiceDetailsPage } from '../pages/service/service-details/service-details';
+import { ServicePopOverPage } from '../pages/service/service-details/pop-over';
+import { ServiceEditPage } from '../pages/service/service-edit/service-edit';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -50,7 +56,13 @@ import { SuppliesEditPage } from '../pages/supplies/supplies-edit/supplies-edit'
     SuppliesCreatePage,
     SuppliesDetailsPage,
     SuppliesPopOverPage,
-    SuppliesEditPage
+    SuppliesEditPage,
+
+    ServiceListPage,
+    ServiceCreatePage,
+    ServiceDetailsPage,
+    ServicePopOverPage,
+    ServiceEditPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -80,7 +92,13 @@ import { SuppliesEditPage } from '../pages/supplies/supplies-edit/supplies-edit'
     SuppliesCreatePage,
     SuppliesDetailsPage,
     SuppliesPopOverPage,
-    SuppliesEditPage
+    SuppliesEditPage,
+
+    ServiceListPage,
+    ServiceCreatePage,
+    ServiceDetailsPage,
+    ServicePopOverPage,
+    ServiceEditPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
