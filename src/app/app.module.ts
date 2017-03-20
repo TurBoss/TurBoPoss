@@ -18,6 +18,8 @@ import { ClientEditPage } from '../pages/client-edit/client-edit';
 import { ProductListPage } from '../pages/product-list/product-list';
 import { ProductCreatePage } from '../pages/product-create/product-create';
 import { ProductDetailsPage } from '../pages/product-details/product-details';
+import { ProductPopOverPage } from '../pages/product-details/pop-over';
+
 
 import { SuppliesListPage } from '../pages/supplies-list/supplies-list';
 
@@ -41,6 +43,7 @@ import { SuppliesListPage } from '../pages/supplies-list/supplies-list';
     ProductListPage,
     ProductCreatePage,
     ProductDetailsPage,
+    ProductPopOverPage,
 
     SuppliesListPage
   ],
@@ -67,6 +70,7 @@ import { SuppliesListPage } from '../pages/supplies-list/supplies-list';
     ProductListPage,
     ProductCreatePage,
     ProductDetailsPage,
+    ProductPopOverPage,
 
     SuppliesListPage
   ],
