@@ -3,14 +3,11 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>TurBoPoss</ion-title>
+    <ion-title>Menta</ion-title>
   </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
-
-  <h3>Opciones</h3>
 
   <ion-list>
     <ion-item>
@@ -21,6 +18,9 @@
     </ion-item>
     <ion-item>
       <button ion-button class="wide" color="primary" [navPush]="productsListPage">Productos</button>
+    </ion-item>
+    <ion-item>
+      <button ion-button class="wide" color="primary" [navPush]="servicesListPage">Servicios</button>
     </ion-item>
     <ion-item>
       <button ion-button class="wide" color="primary" [navPush]="suppliesListPage">Consumibles</button>

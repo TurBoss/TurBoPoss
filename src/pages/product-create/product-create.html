@@ -10,7 +10,7 @@
 
 <ion-content padding>
 
-  <form [formGroup]="client" (ngSubmit)="register()">
+  <form [formGroup]="product" (ngSubmit)="register()">
 
     <ion-item>
       <ion-label floating>Nombre</ion-label>
@@ -23,12 +23,17 @@
     </ion-item>
 
     <ion-item>
+      <ion-label floating>Cantidad</ion-label>
+      <ion-input type="text" formControlName="quantity"></ion-input>
+    </ion-item>
+
+    <ion-item>
       <ion-label floating>Precio</ion-label>
       <ion-input type="text" formControlName="price"></ion-input>
     </ion-item>
 
-	<ion-item>
-      <button ion-button type="submit" class="wide" [disabled]="!client.valid">Registrar</button>
+	  <ion-item>
+      <button ion-button type="submit" class="wide" [disabled]="!product.valid">Registrar</button>
     </ion-item>
 
   </form>

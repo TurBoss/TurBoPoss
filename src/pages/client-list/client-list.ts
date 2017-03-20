@@ -16,7 +16,7 @@ import { ClientCreatePage } from '../client-create/client-create';
 
 export class ClientListPage {
 
-  clientCreatePage: ClientCreatePage;
+  clientCreatePage = ClientCreatePage;
 
   selectedItem: any;
   items: Array<{ id: string,

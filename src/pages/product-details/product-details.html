@@ -18,6 +18,10 @@
       <h2 text-center *ngIf="selectedItem">{{selectedItem.description}}</h2>
     </ion-item>
     <ion-item>
+	  <p>Cantidad:</p>
+	  <h3 text-center *ngIf="selectedItem">{{selectedItem.quantity}}</h3>
+    </ion-item>
+    <ion-item>
 	  <p>Precio:</p>
 	  <h3 text-center *ngIf="selectedItem">{{selectedItem.price}}</h3>
     </ion-item>

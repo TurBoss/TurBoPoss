@@ -16,7 +16,7 @@ import { ProductCreatePage } from '../product-create/product-create';
 
 export class ProductListPage {
 
-  productCreatePage: ProductCreatePage;
+  productCreatePage = ProductCreatePage;
 
   selectedItem: any;
   items: Array<{ id: string,

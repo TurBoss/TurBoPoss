@@ -9,14 +9,14 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item [navPush]="produtCreatePage">
+    <button ion-item [navPush]="productCreatePage">
       <ion-icon class="large" name="cube"></ion-icon>
     </button>
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
       {{item.name}}
       {{item.description}}
       <div class="item-note" item-right>
-        {{item.price}}
+        {{item.quantity}} Uds. {{item.price}} €
       </div>
     </button>
   </ion-list>
