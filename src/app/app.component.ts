@@ -4,10 +4,10 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { StartPage } from '../pages/start-page/start-page';
 
-import { DateListPage } from '../pages/date-list/date-list';
-import { ClientListPage } from '../pages/client-list/client-list';
-import { ProductListPage } from '../pages/product-list/product-list';
-import { SuppliesListPage } from '../pages/supplies-list/supplies-list';
+import { DateListPage } from '../pages/date/date-list/date-list';
+import { ClientListPage } from '../pages/client/client-list/client-list';
+import { ProductListPage } from '../pages/product/product-list/product-list';
+import { SuppliesListPage } from '../pages/supplies/supplies-list/supplies-list';
 
 
 @Component({

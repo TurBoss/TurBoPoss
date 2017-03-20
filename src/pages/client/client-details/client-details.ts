@@ -7,7 +7,7 @@ import { ClientEditPage } from '../client-edit/client-edit';
 
 
 @Component({
-  selector: 'page-item-details',
+  selector: 'page-client-details',
   templateUrl: 'client-details.html'
 })
 

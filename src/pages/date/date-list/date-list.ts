@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController, NavParams } from 'ionic-angular';
 
-import { ItemDetailsPage } from '../item-details/item-details';
+//import { DateDetailsPage } from '../date-details/date-details';
 import { DateCreatePage } from '../date-create/date-create';
 
 
@@ -30,10 +30,11 @@ export class DateListPage {
       });
     }
   }
-
+  /*
   itemTapped(event, item) {
-    this.navCtrl.push(ItemDetailsPage, {
+    this.navCtrl.push(DateDetailsPage, {
       item: item
     });
   }
+  */
 }
