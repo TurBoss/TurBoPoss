@@ -17,6 +17,8 @@ export class DateCreatePage {
 
   private date: FormGroup;
 
+  optionsList: Array<{ id: number, name: string }> = [];
+
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private formBuilder: FormBuilder,
@@ -28,6 +30,29 @@ export class DateCreatePage {
       surname: ['', Validators.required],
       date: ['', Validators.required],
       hour: ['', Validators.required]
+    });
+  }
+
+  client_list() {
+
+    this.optionsList = [];
+
+    var link = "http://127.0.0.1:8100/client-list";
+
+    let type: string = "application/json; charset=UTF-8",
+        headers: any = new Headers({ 'Content-Type': type}),
+        options: any = new RequestOptions({ headers: headers })
+
+    this.http.get(link, options)
+    .map(res => res.json())
+    .subscribe(data =>
+    {
+    		for(let i = 0; i < data.length; i++) {
+    		  this.optionsList.push({
+    		    id: data[i]["id"],
+      			name: data[i]["name"]
+    		  });
+    		}
     });
   }
 
@@ -51,5 +76,9 @@ export class DateCreatePage {
       }
     });
     this.navCtrl.popToRoot();
+  }
+
+  ionViewWillEnter() {
+    this.client_list()
   }
 }
