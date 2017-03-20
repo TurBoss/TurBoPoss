@@ -4,8 +4,6 @@ import { MyApp } from './app.component';
 
 import { StartPage } from '../pages/start-page/start-page';
 
-import { ItemDetailsPage } from '../pages/item-details/item-details';
-
 import { DateListPage } from '../pages/date-list/date-list';
 import { DateCreatePage } from '../pages/date-create/date-create';
 
@@ -32,8 +30,6 @@ import { SuppliesEditPage } from '../pages/supplies-edit/supplies-edit';
     MyApp,
 
     StartPage,
-
-    ItemDetailsPage,
 
     DateListPage,
     DateCreatePage,
@@ -64,8 +60,6 @@ import { SuppliesEditPage } from '../pages/supplies-edit/supplies-edit';
     MyApp,
 
     StartPage,
-
-    ItemDetailsPage,
 
     DateListPage,
     DateCreatePage,
