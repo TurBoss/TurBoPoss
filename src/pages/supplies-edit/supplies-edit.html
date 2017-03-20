@@ -3,14 +3,14 @@
     <button menuToggle *ngIf="!selectedItem">
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Registrar Consumible</ion-title>
+    <ion-title>Editar consumible</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
 
-  <form [formGroup]="supplies" (ngSubmit)="register()">
+  <form [formGroup]="supplies" (ngSubmit)="edit()">
 
     <ion-item>
       <ion-label floating>Nombre</ion-label>
@@ -28,7 +28,7 @@
     </ion-item>
 
 	<ion-item>
-      <button ion-button type="submit" class="wide" [disabled]="!supplies.valid">Registrar</button>
+      <button ion-button type="submit" class="wide" [disabled]="!supplies.valid">Guardar</button>
     </ion-item>
 
   </form>

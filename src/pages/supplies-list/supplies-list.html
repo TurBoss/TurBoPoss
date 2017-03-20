@@ -3,23 +3,21 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Listado de productos</ion-title>
+    <ion-title>Listado de consumibles</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <button ion-item [navPush]="createDatePage">
+    <button ion-item [navPush]="suppliesCreatePage">
       <ion-icon class="large" name="cube"></ion-icon>
     </button>
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      {{item.title}}
+      {{item.name}}
+      {{item.description}}
       <div class="item-note" item-right>
-        {{item.note}}
+        {{item.quantity}} Uds.
       </div>
     </button>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
 </ion-content>

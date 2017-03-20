@@ -8,13 +8,13 @@ import { NavController, NavParams } from 'ionic-angular';
 
 
 @Component({
-  selector: 'page-supplies-create',
-  templateUrl: 'supplies-create.html'
+  selector: 'page-supplies-edit',
+  templateUrl: 'supplies-edit.html'
 })
 
+export class SuppliesEditPage {
 
-export class SuppliesCreatePage {
-
+  private suppliesItem: any;
   private supplies : FormGroup;
 
   constructor(public navCtrl: NavController,
@@ -22,17 +22,19 @@ export class SuppliesCreatePage {
               private formBuilder: FormBuilder,
               public http: Http)
   {
+    this.suppliesItem = navParams.get('item');
 
     this.supplies = this.formBuilder.group({
-      name: ['', Validators.required],
-      description: [''],
-      quantity: ['', Validators.required]
+      id: [this.suppliesItem.id],
+      name: [this.suppliesItem.name, Validators.required],
+      description: [this.suppliesItem.description],
+      quantity: [this.suppliesItem.quantity,  Validators.required]
     });
   }
 
-  register() {
+  edit() {
 
-    var link = "http://127.0.0.1:8100/supplies-create";
+    var link = "http://127.0.0.1:8100/supplies-edit";
     var data = JSON.stringify(this.supplies.value);
 
     let type: string = "application/json; charset=UTF-8",

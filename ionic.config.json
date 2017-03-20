@@ -11,6 +11,10 @@
     {"path": "/product-list", "proxyUrl": "http://192.168.3.122:8081/product-list"},
     {"path": "/product-create", "proxyUrl": "http://192.168.3.122:8081/product-create"},
     {"path": "/product-edit", "proxyUrl": "http://192.168.3.122:8081/product-edit"},
-    {"path": "/product-delete", "proxyUrl": "http://192.168.3.122:8081/product-delete"}
+    {"path": "/product-delete", "proxyUrl": "http://192.168.3.122:8081/product-delete"},
+    {"path": "/supplies-list", "proxyUrl": "http://192.168.3.122:8081/supplies-list"},
+    {"path": "/supplies-create", "proxyUrl": "http://192.168.3.122:8081/supplies-create"},
+    {"path": "/supplies-edit", "proxyUrl": "http://192.168.3.122:8081/supplies-edit"},
+    {"path": "/supplies-delete", "proxyUrl": "http://192.168.3.122:8081/supplies-delete"}
   ]
 }
