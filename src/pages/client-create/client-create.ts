@@ -16,15 +16,12 @@ import { NavController, NavParams } from 'ionic-angular';
 export class ClientCreatePage {
 
   private client : FormGroup;
-  private data : any;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private formBuilder: FormBuilder,
               public http: Http)
   {
-
-    this.data = {}
 
     this.client = this.formBuilder.group({
       name: ['', Validators.required],

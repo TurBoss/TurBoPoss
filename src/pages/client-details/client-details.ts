@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, PopoverController } from 'ionic-angular';
 
 import { ClientPopOverPage } from './pop-over'
+import { ClientEditPage } from '../client-edit/client-edit';
 
 
 @Component({
@@ -23,7 +24,10 @@ export class ClientDetailsPage {
     this.popover.onDidDismiss(() => { this.navCtrl.popToRoot() });
   }
 
-  edit(event, item){
+  edit(event){
+    this.navCtrl.push(ClientEditPage, {
+      item: this.selectedItem
+    });
 
   }
 

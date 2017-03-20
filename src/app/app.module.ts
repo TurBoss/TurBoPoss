@@ -13,6 +13,7 @@ import { ClientListPage } from '../pages/client-list/client-list';
 import { ClientCreatePage } from '../pages/client-create/client-create';
 import { ClientDetailsPage } from '../pages/client-details/client-details';
 import { ClientPopOverPage } from '../pages/client-details/pop-over';
+import { ClientEditPage } from '../pages/client-edit/client-edit';
 
 import { ProductListPage } from '../pages/product-list/product-list';
 import { SuppliesListPage } from '../pages/supplies-list/supplies-list';
@@ -32,6 +33,7 @@ import { SuppliesListPage } from '../pages/supplies-list/supplies-list';
     ClientCreatePage,
     ClientDetailsPage,
     ClientPopOverPage,
+    ClientEditPage,
 
     ProductListPage,
     SuppliesListPage
@@ -54,6 +56,7 @@ import { SuppliesListPage } from '../pages/supplies-list/supplies-list';
     ClientCreatePage,
     ClientDetailsPage,
     ClientPopOverPage,
+    ClientEditPage,
 
     ProductListPage,
     SuppliesListPage

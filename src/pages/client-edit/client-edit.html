@@ -10,7 +10,7 @@
 
 <ion-content padding>
 
-  <form [formGroup]="client" (ngSubmit)="register()">
+  <form [formGroup]="client" (ngSubmit)="edit()">
 
     <ion-item>
       <ion-label floating>Nombre</ion-label>
@@ -38,7 +38,7 @@
     </ion-item>
 
 	<ion-item>
-      <button ion-button type="submit" class="wide" [disabled]="!client.valid">Editar</button>
+      <button ion-button type="submit" class="wide" [disabled]="!client.valid">Guardar</button>
     </ion-item>
 
   </form>

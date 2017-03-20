@@ -15,23 +15,23 @@ import { NavController, NavParams } from 'ionic-angular';
 
 export class ClientEditPage {
 
+  private clientItem: any;
   private client : FormGroup;
-  private data : any;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private formBuilder: FormBuilder,
               public http: Http)
   {
-
-    this.data = {}
+    this.clientItem = navParams.get('item');
 
     this.client = this.formBuilder.group({
-      name: ['', Validators.required],
-      surname: ['', Validators.required],
-      tlf: [''],
-      email: [''],
-      nif: [''],
+      id: [this.clientItem.id],
+      name: [this.clientItem.name, Validators.required],
+      surname: [this.clientItem.surname, Validators.required],
+      tlf: [this.clientItem.tlf],
+      email: [this.clientItem.email],
+      nif: [this.clientItem.nif],
     });
   }
 
