@@ -6,6 +6,9 @@ import { StartPage } from '../pages/start-page/start-page';
 
 import { DateListPage } from '../pages/date/date-list/date-list';
 import { DateCreatePage } from '../pages/date/date-create/date-create';
+import { DateDetailsPage } from '../pages/date/date-details/date-details';
+import { DatePopOverPage } from '../pages/date/date-details/pop-over';
+import { DateEditPage } from '../pages/date/date-edit/date-edit';
 
 import { ClientListPage } from '../pages/client/client-list/client-list';
 import { ClientCreatePage } from '../pages/client/client-create/client-create';
@@ -39,6 +42,9 @@ import { ServiceEditPage } from '../pages/service/service-edit/service-edit';
 
     DateListPage,
     DateCreatePage,
+    DateDetailsPage,
+    DatePopOverPage,
+    DateEditPage,
 
     ClientListPage,
     ClientCreatePage,
@@ -75,6 +81,9 @@ import { ServiceEditPage } from '../pages/service/service-edit/service-edit';
 
     DateListPage,
     DateCreatePage,
+    DateDetailsPage,
+    DatePopOverPage,
+    DateEditPage,
 
     ClientListPage,
     ClientCreatePage,

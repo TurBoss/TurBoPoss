@@ -3,30 +3,36 @@
     <button menuToggle *ngIf="!selectedItem">
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Crear cita</ion-title>
+    <ion-title>Registrar cita</ion-title>
   </ion-navbar>
 </ion-header>
 
 
-<ion-content>
+<ion-content padding>
 
-  <ion-list>
+  <form [formGroup]="date" (ngSubmit)="register()">
 
     <ion-item>
-      <ion-label floating>Nombre</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-label floating>Cleinte</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Apellidos</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label floating>Telefono</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-label floating>Fecha</ion-label>
+      <ion-input type="text" formControlName="date"></ion-input>
+
+      <ion-datetime displayFormat="DD/MM/YYYY" formControlName="date"></ion-datetime>
     </ion-item>
 
-  </ion-list>
+    <ion-item>
+      <ion-label floating>Hora</ion-label>
+      <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" formControlName="hour"></ion-datetime>
+    </ion-item>
+
+	<ion-item>
+      <button ion-button type="submit" class="wide" [disabled]="!date.valid">Registrar</button>
+    </ion-item>
+
+  </form>
 
 </ion-content>

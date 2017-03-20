@@ -8,32 +8,36 @@ import { NavController, NavParams } from 'ionic-angular';
 
 
 @Component({
-  selector: 'page-date-create',
-  templateUrl: 'date-create.html'
+  selector: 'page-date-edit',
+  templateUrl: 'date-edit.html'
 })
 
 
-export class DateCreatePage {
+export class DateEditPage {
 
-  private date: FormGroup;
+  private dateItem: any;
+  private date : FormGroup;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private formBuilder: FormBuilder,
               public http: Http)
   {
+    this.dateItem = navParams.get('item');
 
     this.date = this.formBuilder.group({
-      name: ['', Validators.required],
-      surname: ['', Validators.required],
-      date: ['', Validators.required],
-      hour: ['', Validators.required]
+      id: [this.dateItem.id],
+      name: [this.dateItem.name, Validators.required],
+      surname: [this.dateItem.surname, Validators.required],
+      tlf: [this.dateItem.tlf],
+      email: [this.dateItem.email],
+      nif: [this.dateItem.nif],
     });
   }
 
-  register() {
+  edit() {
 
-    var link = "http://127.0.0.1:8100/date-create";
+    var link = "http://127.0.0.1:8100/date-edit";
     var data = JSON.stringify(this.date.value);
 
     let type: string = "application/json; charset=UTF-8",

@@ -19,6 +19,10 @@
     {"path": "/service-list", "proxyUrl": "http://192.168.3.122:8081/service-list"},
     {"path": "/service-create", "proxyUrl": "http://192.168.3.122:8081/service-create"},
     {"path": "/service-edit", "proxyUrl": "http://192.168.3.122:8081/service-edit"},
-    {"path": "/service-delete", "proxyUrl": "http://192.168.3.122:8081/service-delete"}
+    {"path": "/service-delete", "proxyUrl": "http://192.168.3.122:8081/service-delete"},
+    {"path": "/date-list", "proxyUrl": "http://192.168.3.122:8081/date-list"},
+    {"path": "/date-create", "proxyUrl": "http://192.168.3.122:8081/date-create"},
+    {"path": "/date-edit", "proxyUrl": "http://192.168.3.122:8081/date-edit"},
+    {"path": "/date-delete", "proxyUrl": "http://192.168.3.122:8081/date-delete"}
   ]
 }

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Editar cita</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <form [formGroup]="date" (ngSubmit)="edit()">
+
+    <ion-item>
+      <ion-label floating>Nombre</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Fecha y hora</ion-label>
+      <ion-input type="text" formControlName="datetime"></ion-input>
+    </ion-item>
+
+	<ion-item>
+      <button ion-button type="submit" class="wide" [disabled]="!date.valid">Guardar</button>
+    </ion-item>
+
+  </form>
+
+</ion-content>
