@@ -9,17 +9,15 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item [navPush]="createDatePage">
+    <button ion-item [navPush]="createProductPage">
       <ion-icon class="large" name="cube"></ion-icon>
     </button>
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      {{item.title}}
+      {{item.name}}
+      {{item.description}}
       <div class="item-note" item-right>
-        {{item.note}}
+        {{item.price}}
       </div>
     </button>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
 </ion-content>

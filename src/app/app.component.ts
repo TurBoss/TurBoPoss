@@ -28,6 +28,7 @@ export class MyApp {
 
     this.pages = [
       { title: 'Inicio', component: StartPage },
+
       { title: 'Citas', component: DateListPage },
       { title: 'Clientes', component: ClientListPage },
       { title: 'Productos', component: ProductListPage },
