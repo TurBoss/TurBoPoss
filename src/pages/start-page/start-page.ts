@@ -7,7 +7,7 @@ import { SuppliesListPage } from '../supplies-list/supplies-list';
 
 
 @Component({
-  selector: 'page-hello-ionic',
+  selector: 'start-page',
   templateUrl: 'start-page.html'
 })
 export class StartPage {
