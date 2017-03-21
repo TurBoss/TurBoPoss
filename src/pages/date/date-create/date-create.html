@@ -21,14 +21,12 @@
 
     <ion-item>
       <ion-label floating>Fecha</ion-label>
-      <ion-input type="text" formControlName="date"></ion-input>
-
-      <ion-datetime displayFormat="DD/MM/YYYY" formControlName="date"></ion-datetime>
+      <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" formControlName="date" [(ngModel)]="myDate"></ion-datetime>
     </ion-item>
 
     <ion-item>
       <ion-label floating>Hora</ion-label>
-      <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" formControlName="hour"></ion-datetime>
+      <ion-datetime displayFormat="HH:mm" pickerFormat="HH: mm" formControlName="hour" [(ngModel)]="myDate"></ion-datetime>
     </ion-item>
 
 	<ion-item>

@@ -13,16 +13,21 @@
   <form [formGroup]="date" (ngSubmit)="edit()">
 
     <ion-item>
-      <ion-label floating>Nombre</ion-label>
+      <ion-label floating>Cliente</ion-label>
       <ion-input type="text" formControlName="name"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Fecha y hora</ion-label>
-      <ion-input type="text" formControlName="datetime"></ion-input>
+      <ion-label floating>Fecha</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" formControlName="date" [(ngModel)]="myDate"></ion-datetime>
     </ion-item>
 
-	<ion-item>
+    <ion-item>
+      <ion-label floating>Hora</ion-label>
+      <ion-datetime displayFormat="HH:mm" pickerFormat="HH: mm" formControlName="hour" [(ngModel)]="myHour"></ion-datetime>
+    </ion-item>
+
+	  <ion-item>
       <button ion-button type="submit" class="wide" [disabled]="!date.valid">Guardar</button>
     </ion-item>
 

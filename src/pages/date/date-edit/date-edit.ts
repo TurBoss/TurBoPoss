@@ -12,11 +12,12 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'date-edit.html'
 })
 
-
 export class DateEditPage {
 
   private dateItem: any;
   private date : FormGroup;
+  public myDate: string;
+  public myHour: string;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -25,13 +26,15 @@ export class DateEditPage {
   {
     this.dateItem = navParams.get('item');
 
+    this.myDate = this.dateItem.date.day + "/" + this.dateItem.date.month + "/" + this.dateItem.date.year
+    this.myHour = this.dateItem.date.hour + ":" + this.dateItem.date.minutes
+
     this.date = this.formBuilder.group({
       id: [this.dateItem.id],
       name: [this.dateItem.name, Validators.required],
       surname: [this.dateItem.surname, Validators.required],
-      tlf: [this.dateItem.tlf],
-      email: [this.dateItem.email],
-      nif: [this.dateItem.nif],
+      date: ['', Validators.required],
+      hour: ['', Validators.required]
     });
   }
 

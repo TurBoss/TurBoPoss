@@ -16,6 +16,7 @@ import { NavController, NavParams } from 'ionic-angular';
 export class DateCreatePage {
 
   private date: FormGroup;
+  public myDate: string;
 
   optionsList: Array<{ id: string, name: string, surname: string }> = [];
 
@@ -30,6 +31,9 @@ export class DateCreatePage {
       date: ['', Validators.required],
       hour: ['', Validators.required]
     });
+
+    this.myDate = new Date().toISOString();
+
   }
 
   client_list() {
