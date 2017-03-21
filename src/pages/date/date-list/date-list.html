@@ -16,8 +16,9 @@
       {{item.client.name}}
       {{item.client.surname}}
       <div class="item-note" item-right>
-        {{item.date.day}}/{{item.date.month}}/{{item.date.year}}
-        {{item.hour.hour}}:{{item.hour.minutes}}
+        <ion-item>
+          <ion-datetime doneText="OK" cancelText="Cancelar" displayFormat="DD/MM/YYYY HH:mm" disabled="true" [(ngModel)]="item.date"></ion-datetime>
+        </ion-item>
       </div>
     </button>
   </ion-list>

@@ -14,6 +14,7 @@ import { DateEditPage } from '../date-edit/date-edit';
 export class DateDetailsPage {
   selectedItem: any;
   popover: any;
+  myDate: string;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -22,6 +23,7 @@ export class DateDetailsPage {
     this.selectedItem = navParams.get('item');
     this.popover = this.popoverCtrl.create(DatePopOverPage, { id: this.selectedItem.id });
     this.popover.onDidDismiss(() => { this.navCtrl.popToRoot() });
+    this.myDate = this.selectedItem.date;
   }
 
   edit(event){

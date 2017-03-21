@@ -7,7 +7,6 @@
   </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
 
   <form [formGroup]="date" (ngSubmit)="edit()">
@@ -19,12 +18,7 @@
 
     <ion-item>
       <ion-label floating>Fecha</ion-label>
-      <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" formControlName="date" [(ngModel)]="myDate"></ion-datetime>
-    </ion-item>
-
-    <ion-item>
-      <ion-label floating>Hora</ion-label>
-      <ion-datetime displayFormat="HH:mm" pickerFormat="HH: mm" formControlName="hour" [(ngModel)]="myHour"></ion-datetime>
+      <ion-datetime doneText="Ok" cancelText="Cancelar" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" formControlName="date" [(ngModel)]="myDate"></ion-datetime>
     </ion-item>
 
 	  <ion-item>

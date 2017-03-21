@@ -21,8 +21,7 @@ export class DateListPage {
   selectedItem: any;
   items: Array<{ id: string,
                  client: string,
-                 date: string,
-                 hour: string }>;
+                 date: string }>;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -52,8 +51,7 @@ export class DateListPage {
     		  this.items.push({
     		    id: data[i]["id"],
             client: data[i]['client'],
-            date: JSON.parse(data[i]['date']),
-            hour: JSON.parse(data[i]['hour'])
+            date: data[i]['date'],
     		  });
     		}
     });

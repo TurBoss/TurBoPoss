@@ -6,6 +6,8 @@ import 'rxjs/add/operator/map';
 
 import { NavController, NavParams } from 'ionic-angular';
 
+import moment from 'moment';
+
 
 @Component({
   selector: 'page-date-create',
@@ -18,7 +20,9 @@ export class DateCreatePage {
   private date: FormGroup;
   public myDate: string;
 
-  optionsList: Array<{ id: string, name: string, surname: string }> = [];
+  optionsList: Array<{ id: string,
+                       name: string,
+                       surname: string }> = [];
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -28,11 +32,10 @@ export class DateCreatePage {
 
     this.date = this.formBuilder.group({
       client: ['', Validators.required],
-      date: ['', Validators.required],
-      hour: ['', Validators.required]
+      date: ['', Validators.required]
     });
 
-    this.myDate = new Date().toISOString();
+    this.myDate = moment(new Date().toISOString()).locale('es').format();
 
   }
 

@@ -10,8 +10,7 @@
 <ion-content>
   <ion-list>
     <ion-item>
-      <p>Fecha y hora</p>
-      <h1 text-center *ngIf="selectedItem">{{selectedItem.date.day}}/{{selectedItem.date.month}}/{{selectedItem.date.year}} {{selectedItem.hour.hour}}:{{selectedItem.hour.minutes}}</h1>
+      <ion-datetime doneText="OK" cancelText="Cancelar" *ngIf="selectedItem" displayFormat="DD/MM/YYYY HH:mm" disabled="true" [(ngModel)]="selectedItem.date"></ion-datetime>
     </ion-item>
     <ion-item>
 	    <p>Nombre:</p>
