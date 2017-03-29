@@ -15,7 +15,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 export class DateEditPage {
 
-  private dateItem: any;
+  public dateItem: any;
   private date : FormGroup;
 
   optionsList: Array<{ id: string,
@@ -29,11 +29,12 @@ export class DateEditPage {
   {
     this.dateItem = navParams.get('item');
 
+    console.log(this.dateItem);
+
     this.date = this.formBuilder.group({
       id: [this.dateItem.id],
-      name: [this.dateItem.name, Validators.required],
-      surname: [this.dateItem.surname, Validators.required],
-      date: ['', Validators.required]
+      client: [this.dateItem.client.id, Validators.required],
+      date: [this.dateItem.date, Validators.required]
     });
   }
 
@@ -82,4 +83,9 @@ export class DateEditPage {
     });
     this.navCtrl.popToRoot();
   }
+
+  ionViewWillEnter() {
+    this.client_list()
+  }
+
 }

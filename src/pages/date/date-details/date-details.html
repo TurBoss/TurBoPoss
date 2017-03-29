@@ -10,7 +10,7 @@
 <ion-content>
   <ion-list>
     <ion-item>
-      <ion-datetime doneText="OK" cancelText="Cancelar" *ngIf="selectedItem" displayFormat="DD/MM/YYYY HH:mm" disabled="true" [(ngModel)]="selectedItem.date"></ion-datetime>
+      <ion-datetime *ngIf="selectedItem" displayFormat="DD/MM/YYYY HH:mm" disabled="true" [(ngModel)]="selectedItem.date"></ion-datetime>
     </ion-item>
     <ion-item>
 	    <p>Nombre:</p>

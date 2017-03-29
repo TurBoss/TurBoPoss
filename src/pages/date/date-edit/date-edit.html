@@ -14,13 +14,13 @@
     <ion-item>
       <ion-label floating>Cliente</ion-label>
       <ion-select doneText="Ok" cancelText="Cancelar" formControlName="client">
-        <ion-option *ngFor="let item of optionsList" value="{{item.id}}">{{item.name}} {{item.surname}}</ion-option>
+        <ion-option *ngFor="let item of optionsList" [selected]="item.id == id" value="{{item.id}}">{{item.name}} {{item.surname}}</ion-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label floating>Fecha</ion-label>
-      <ion-datetime doneText="Ok" cancelText="Cancelar" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" formControlName="date" [(ngModel)]="myDate"></ion-datetime>
+      <ion-datetime doneText="Ok" cancelText="Cancelar" displayFormat="DD/MM/YYYY HH:mm" pickerFormat="DD/MM/YYYY HH:mm" formControlName="date" [(ngModel)]="dateItem.date"></ion-datetime>
     </ion-item>
 
 	  <ion-item>
