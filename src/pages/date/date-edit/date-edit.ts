@@ -12,10 +12,15 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'date-edit.html'
 })
 
+
 export class DateEditPage {
 
   private dateItem: any;
   private date : FormGroup;
+
+  optionsList: Array<{ id: string,
+                       name: string,
+                       surname: string }> = [];
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -29,6 +34,30 @@ export class DateEditPage {
       name: [this.dateItem.name, Validators.required],
       surname: [this.dateItem.surname, Validators.required],
       date: ['', Validators.required]
+    });
+  }
+
+  client_list() {
+
+    this.optionsList = [];
+
+    var link = "http://127.0.0.1:8100/client-list";
+
+    let type: string = "application/json; charset=UTF-8",
+        headers: any = new Headers({ 'Content-Type': type}),
+        options: any = new RequestOptions({ headers: headers })
+
+    this.http.get(link, options)
+    .map(res => res.json())
+    .subscribe(data =>
+    {
+        for(let i = 0; i < data.length; i++) {
+          this.optionsList.push({
+            id: data[i]["id"],
+            name: data[i]["name"],
+            surname: data[i]["surname"]
+          });
+        }
     });
   }
 

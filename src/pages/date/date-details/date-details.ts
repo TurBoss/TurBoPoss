@@ -12,6 +12,7 @@ import { DateEditPage } from '../date-edit/date-edit';
 })
 
 export class DateDetailsPage {
+
   selectedItem: any;
   popover: any;
   myDate: string;
@@ -36,6 +37,4 @@ export class DateDetailsPage {
   delete_confirm(event) {
     this.popover.present({ ev: event });
   }
-
-
 }

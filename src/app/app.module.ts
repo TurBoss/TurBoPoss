@@ -3,6 +3,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { StartPage } from '../pages/start-page/start-page';
+import { ServerDownPage } from '../pages/server-down/server-down';
 
 import { DateListPage } from '../pages/date/date-list/date-list';
 import { DateCreatePage } from '../pages/date/date-create/date-create';
@@ -39,6 +40,7 @@ import { ServiceEditPage } from '../pages/service/service-edit/service-edit';
     MyApp,
 
     StartPage,
+    ServerDownPage,
 
     DateListPage,
     DateCreatePage,
@@ -78,6 +80,7 @@ import { ServiceEditPage } from '../pages/service/service-edit/service-edit';
     MyApp,
 
     StartPage,
+    ServerDownPage,
 
     DateListPage,
     DateCreatePage,
