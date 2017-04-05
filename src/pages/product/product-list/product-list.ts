@@ -22,6 +22,7 @@ export class ProductListPage {
   items: Array<{ id: string,
                  name: string,
                  description: string,
+                 category: string,
                  price: string,
                  quantity: string }>;
 
@@ -54,6 +55,7 @@ export class ProductListPage {
     		    id: data[i]["id"],
       			name: data[i]["name"],
       			description: data[i]["description"],
+            category: data[i]['category'],
       			price: data[i]["price"],
             quantity: data[i]["quantity"]
     		  });

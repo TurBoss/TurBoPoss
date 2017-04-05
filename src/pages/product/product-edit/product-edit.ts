@@ -29,6 +29,7 @@ export class ProductEditPage {
       id: [this.productItem.id],
       name: [this.productItem.name, Validators.required],
       description: [this.productItem.description],
+      category: [this.productItem.category],
       quantity: [this.productItem.quantity, Validators.required],
       price: [this.productItem.price, Validators.required]
     });

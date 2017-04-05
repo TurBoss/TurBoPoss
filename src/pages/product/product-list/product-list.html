@@ -13,8 +13,7 @@
       <ion-icon class="large" name="cube"></ion-icon>
     </button>
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      {{item.name}}
-      {{item.description}}
+      {{item.name}} {{item.description}} - {{item.category}}
       <div class="item-note" item-right>
         {{item.quantity}} Uds. {{item.price}} €
       </div>

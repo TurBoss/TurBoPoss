@@ -8,7 +8,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 
 @Component({
-  selector: 'page-product-createe',
+  selector: 'page-product-create',
   templateUrl: 'product-create.html'
 })
 
@@ -26,6 +26,7 @@ export class ProductCreatePage {
     this.product = this.formBuilder.group({
       name: ['', Validators.required],
       description: [''],
+      category: [''],
       quantity: ['', Validators.required],
       price: ['', Validators.required]
     });
