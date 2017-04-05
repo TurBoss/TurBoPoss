@@ -21,6 +21,10 @@
       <h2 text-center *ngIf="selectedItem">{{selectedItem.client.surname}}</h2>
     </ion-item>
     <ion-item>
+	    <p>Asunto:</p>
+      <h2 text-center *ngIf="selectedItem">{{selectedItem.subject}}</h2>
+    </ion-item>
+    <ion-item>
 	    <p>Telefono:</p>
 	    <h3 text-center *ngIf="selectedItem">{{selectedItem.client.tlf}}</h3>
     </ion-item>

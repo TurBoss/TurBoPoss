@@ -13,9 +13,8 @@
       <ion-icon class="large" name="time"></ion-icon>
     </button>
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      {{item.client.name}}
-      {{item.client.surname}}
-      <div class="item-note" item-right>
+      {{item.client.name}} {{item.client.surname}} - {{item.subject}}
+      <div class="item-date" item-right>
         <ion-item>
           <ion-datetime doneText="OK" cancelText="Cancelar" displayFormat="DD/MM/YYYY HH:mm" disabled="true" [(ngModel)]="item.date"></ion-datetime>
         </ion-item>

@@ -34,6 +34,7 @@ export class DateEditPage {
     this.date = this.formBuilder.group({
       id: [this.dateItem.id],
       client: [this.dateItem.client.id, Validators.required],
+      subject: [this.dateItem.subject],
       date: [this.dateItem.date, Validators.required]
     });
   }

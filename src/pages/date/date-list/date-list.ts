@@ -21,6 +21,7 @@ export class DateListPage {
   selectedItem: any;
   items: Array<{ id: string,
                  client: string,
+                 subject: string,
                  date: string }>;
 
   constructor(public navCtrl: NavController,
@@ -44,13 +45,14 @@ export class DateListPage {
         options: any = new RequestOptions({ headers: headers })
 
     this.http.get(link, options)
-    .map(res => res.json())
-    .subscribe(data =>
-    {
+      .map(res => res.json())
+      .subscribe(data =>
+      {
     		for(let i = 0; i < data.length; i++) {
     		  this.items.push({
     		    id: data[i]["id"],
             client: data[i]['client'],
+            subject: data[i]['subject'],
             date: data[i]['date'],
     		  });
     		}

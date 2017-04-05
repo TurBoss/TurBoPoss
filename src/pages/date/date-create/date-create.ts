@@ -32,6 +32,7 @@ export class DateCreatePage {
 
     this.date = this.formBuilder.group({
       client: ['', Validators.required],
+      subject: [''],
       date: ['', Validators.required]
     });
 
