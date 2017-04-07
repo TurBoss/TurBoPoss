@@ -18,7 +18,12 @@ export class SuppliesListPage {
 
   suppliesCreatePage = SuppliesCreatePage;
 
+  search_string: string;
+
   selectedItem: any;
+
+  all_items: any;
+
   items: Array<{id: string,
                 name: string,
                 description: string,
@@ -32,6 +37,21 @@ export class SuppliesListPage {
     this.selectedItem = navParams.get('item');
     this.items = [];
 
+  }
+
+  getItems(ev: any) {
+    // Reset items back to all of the items
+    this.items = this.all_items
+
+    // set val to the value of the searchbar
+    let val = ev.target.value;
+
+    // if the value is an empty string don't filter the items
+    if (val && val.trim() != '') {
+      this.items = this.items.filter((item) => {
+        return (item['name'].toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
   }
 
   supplies_list() {
@@ -56,6 +76,7 @@ export class SuppliesListPage {
       			quantity: data[i]["quantity"]
     		  });
     		}
+        this.all_items = this.items;
     });
   }
 

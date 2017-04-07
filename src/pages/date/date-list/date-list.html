@@ -12,6 +12,7 @@
     <button ion-item [navPush]="dateCreatePage">
       <ion-icon class="large" name="time"></ion-icon>
     </button>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
       {{item.client.name}} {{item.client.surname}} - {{item.subject}}
       <div class="item-date" item-right>
